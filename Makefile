@@ -69,7 +69,7 @@ PURPLE_C_FILES := pidgin-conversation-smiley-disabled.c
 all: $(TEAMS_TARGET)
 
 pidgin-conversation-smiley-disabled.so: $(PURPLE_C_FILES) $(PURPLE_COMPAT_FILES)
-	$(CC) -fPIC $(CFLAGS) -shared -o $@ $^ $(LDFLAGS) `$(PKG_CONFIG) pidgin glib-2.0 gtk-2.0 zlib --libs --cflags`  $(INCLUDES) -g -ggdb
+	$(CC) -fPIC $(CFLAGS) -shared -o $@ $^ $(LDFLAGS) `$(PKG_CONFIG) pidgin glib-2.0 gtk+-2.0 zlib --libs --cflags`  $(INCLUDES) -g -ggdb
 
 pidgin-conversation-smiley-disabled.dll: $(PURPLE_C_FILES) $(PURPLE_COMPAT_FILES)
 	$(WIN32_CC) -shared -o $@ $^ $(WIN32_PIDGIN2_CFLAGS) $(WIN32_PIDGIN2_LDFLAGS)
